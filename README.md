@@ -34,3 +34,25 @@
  ```
   http://localhost:3000/api/seed
  ```
+
+
+# Build Production
+
+1. Crear el archivo .env.prod
+
+2. Llenar las vars de prod
+
+3. Crear la nueva imagen 
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+
+
+# Notas
+
+ Heroku redeploy sin cambios 
+ ```
+ git commit --allow-empty -m "Heroku deploy"
+ git push heroku *branch*
+ ```
